@@ -1,0 +1,79 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4"><font size="25px" font color="#FF0000"><strong>Neha Sharma</strong></font></h1>
+    <p>The Current date and time on the server is @Model.todaysDate</p>
+</div>
+@{
+  var heading="About Me";
+}
+<h2><font size="5" font color="#FF0000">@heading</font></h2>
+@{
+  var para="I am Neha Sharma resident of VPO Chabbewal, Distt. Hoshiarpur in Punjab Province of     India. and I am from Hinduissm Family.Moreover I am 25 years old, my birth place is Hoshiarpur. I am a multilingual person as I can speak English, hindi and punjabi.";
+}
+<p>@para</p>
+
+@{
+  var heading1="ACADEMIC BACKGROUND";
+}
+<h2><font size="5" font color="#FF0000">@heading1</font></h2>
+  @{
+    var para1=" I have done my initial education from Indian Certificate of Secondary Education. And further, I enrolled in Central Board of Secondary Education for senior secondary examinations. I secured first division in both the examinations with 87%. In the second and third year of  BCA I was college topper and with 70% marks from Punjab University, Chandigarh .I have completed Graduation in 2015. In the year 2015 I planned to go for Masters Program in the field of Computer Science, i.e. Master of Computer Applications (MCA). In the 2018 I have successfully completed this program with top position in Sant Baba Bhag Singh University and with CCPG 8.77 with the specialization in the field of Flutter as Mobile Application from Sant Baba Bhag Singh University. This way I have proved my mettle in my academics. Currently I am pursuing Internet application and web development from St Clair College (Windsor)";
+  }
+  <p> @para1</p>
+@{
+  var heading3="PROFESSIONAL EXPERIENCE";
+}
+<h2><font size="5" font color="#FF0000">@heading3</font></h2>
+@{
+  var @para2="Six Months Industrial Training Course ANDROID in ‘NORDIA VENTURES’ Company in Mohali. Attended the Six Months Course Digital Marketing in ‘SEO Discovery’ Company in Mohali. One year  Experience as a Flutter Developer(Hybrid Mobile App Developer) in Click Media Soft Solution Ptv Ltd.  at Mohali";
+}
+<p>@para2</p>
+@{
+  var heading5="Hobbies";
+
+}
+<h2><font size="5" font color="#FF0000">@heading5</font></h2>
+@{
+  var hobbies=new[]{
+    new{
+      name="I love Dancing",
+      type="Traditional dance",
+      favourite="Traditional Dance"
+    },
+    new{
+      name="I love Travelling",
+      type="Hilly area,historial places",
+      favourite="Hilly area"
+      
+    },
+    new{
+      name="I love to read books",
+      type="Novels,fiction,Biography",
+      favourite="Novels"
+       
+    },
+    new{
+      name ="I love play sports",
+      type="Outdoor sport",
+      favourite="Basketball"
+       
+    },
+    new{
+      name="I love listen music",
+      type="punjabi music,Pop music , Classic music",
+      favourite="Punjabi Music"
+      
+    }
+    
+  };
+}
+@for(var i=0;i<hobbies.Length;i++){
+  var hobbiesname=hobbies[i];
+  <ul><li>@hobbiesname.name </li></ul> 
+  <ul><text>My Favourtie : <b>@hobbiesname.favourite</b> </text></ul>
+}
